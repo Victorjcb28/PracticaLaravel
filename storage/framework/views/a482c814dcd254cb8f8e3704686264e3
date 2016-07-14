@@ -1,0 +1,46 @@
+	<?php $__env->startSection('content'); ?>
+<?php echo $__env->make('alerts.errors.errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				<div class="header">
+			<div class="top-header">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="header-info">
+				<h1>BIG HERO 6</h1>
+				<?php echo Form::open(['route'=>'log.store', 'method'=>'POST']); ?>
+
+					<div class="form-group">
+						<?php echo Form::label('correo','Correo:'); ?>
+
+						<?php echo Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo']); ?>
+
+					</div>
+					<div class="form-group">
+						<?php echo Form::label('contrasena','Contraseña:'); ?>
+
+						<?php echo Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña']); ?>
+
+					</div>
+					<?php echo Form::submit('Iniciar',['class'=>'btn btn-primary']); ?>
+
+				<?php echo Form::close(); ?>
+
+			</div>
+		</div>
+		<div class="review-slider">
+			 <ul id="flexiselDemo1">
+			<li><img src="images/r1.jpg" alt=""/></li>
+			<li><img src="images/r2.jpg" alt=""/></li>
+			<li><img src="images/r3.jpg" alt=""/></li>
+			<li><img src="images/r4.jpg" alt=""/></li>
+			<li><img src="images/r5.jpg" alt=""/></li>
+			<li><img src="images/r6.jpg" alt=""/></li>
+		</ul>
+
+		</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.principal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

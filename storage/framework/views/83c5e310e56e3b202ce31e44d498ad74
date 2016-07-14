@@ -1,0 +1,20 @@
+<div class="form-group">
+  <?php echo Form::label('Nombre'); ?>
+
+  <?php echo Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del usuario']); ?>
+
+
+</div>
+<div class="form-group">
+  <?php echo Form::label('Correo'); ?>
+
+  <?php echo Form::email('email',null,['class'=>'form-control','placeholder'=>'Ingresa el correo']); ?>
+
+</div>
+<div class="form-group">
+  <?php echo Form::label('Contraseña'); ?>
+
+  <?php echo Form::password('password',['class'=>'form-control','placeholder'=>'Ingresa la clave']); ?>
+
+
+</div>
